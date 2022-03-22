@@ -9,6 +9,12 @@
     "allowJs": true // allow a partial TypeScript and JavaScript codebase
   },
   "include": [
-    "./src/"
+    "./src/",
+    "./tools/"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
   ]
 }

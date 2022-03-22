@@ -5,6 +5,7 @@ specifiers:
   '@types/cssnano': ^5.1.0
   '@types/react': ^17.0.41
   '@types/react-dom': ^17.0.14
+  '@types/react-router-dom': ^5.3.3
   babel-loader: 8.2.2
   babel-preset-react-app: 10.0.0
   bootstrap: 5.1.0
@@ -41,6 +42,7 @@ specifiers:
 dependencies:
   '@types/react': 17.0.41
   '@types/react-dom': 17.0.14
+  '@types/react-router-dom': 5.3.3
   bootstrap: 5.1.0
   prop-types: 15.7.2
   react: 17.0.2
@@ -1386,6 +1388,10 @@ packages:
       '@types/node': 17.0.22
     dev: true
 
+  /@types/history/4.7.11:
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+    dev: false
+
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
@@ -1430,6 +1436,21 @@ packages:
       '@types/react': 17.0.41
       hoist-non-react-statics: 3.3.2
       redux: 4.1.1
+    dev: false
+
+  /@types/react-router-dom/5.3.3:
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.41
+      '@types/react-router': 5.1.18
+    dev: false
+
+  /@types/react-router/5.1.18:
+    resolution: {integrity: sha512-YYknwy0D0iOwKQgz9v8nOzt2J6l4gouBmDnWqUUznltOTaon+r8US8ky8HvN0tXvc38U9m6z/t2RsVsnd1zM0g==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.41
     dev: false
 
   /@types/react/17.0.41:

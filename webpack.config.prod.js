@@ -9,7 +9,7 @@ process.env.NODE_ENV = "production";
 module.exports = {
   mode: 'production',
   target: "web",
-  entry: "./src/index",
+  entry: "./src/index.tsx",
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -49,11 +49,9 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      },
+      { test: /\.(t|j)sx?$/, use: { loader: 'ts-loader' }, exclude: /node_modules/ },
+      // addition - add source-map support
+      { enforce: "pre", test: /\.js$/, exclude: /node_modules/, loader: "source-map-loader" },
       {
         test: /\.(css|scss)$/i,
         use: [
@@ -76,5 +74,5 @@ module.exports = {
         ]
       }
     ],
-  }
+  },
 }

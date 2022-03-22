@@ -7,7 +7,7 @@ process.env.NODE_ENV = "development";
 module.exports = {
   mode: 'development',
   target: "web",
-  entry: "./src/index",
+  entry: "./src/index.tsx",
   devtool: "cheap-module-source-map",
   output: {
     path: path.resolve(__dirname, 'build'),

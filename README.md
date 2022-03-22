@@ -8,7 +8,7 @@
 
 #### Get the [type declaration files](https://github.com/DefinitelyTyped/DefinitelyTyped) for react, react-dom
 ```
-  npm install --save @types/react @types/react-dom
+  npm install --save @types/react @types/react-dom @types/react-router-dom
 ```
 
 
