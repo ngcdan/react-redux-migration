@@ -1,13 +1,13 @@
 import * as React from "react"
 import { Switch, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import HomePage from './home/HomePage';
 import Header from './common/Header';
 import AboutPage from './about/AboutPage';
 import CoursePage from './courses/CoursePage';
 import ManageCoursePage from './courses/ManageCoursePage';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
