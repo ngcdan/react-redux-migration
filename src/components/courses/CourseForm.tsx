@@ -1,8 +1,15 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { TextInput, SelectInput } from 'reactjs-lib';
-import PropTypes from 'prop-types';
 
-export default class CourseForm extends Component {
+interface CourseFormProps {
+  authors: Array<any>,
+  course: any,
+  errors: any,
+  onSave: (event: any) => void,
+  onChange: () => void,
+  saving: boolean
+}
+export default class CourseForm extends React.Component<CourseFormProps, {}> {
   render() {
     let { course, onSave, onChange, authors, saving, errors } = this.props;
     return (
@@ -37,11 +44,3 @@ export default class CourseForm extends Component {
   }
 }
 
-CourseForm.propTypes = {
-  authors: PropTypes.array,
-  course: PropTypes.object.isRequired,
-  errors: PropTypes.object,
-  onSave: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-  saving: PropTypes.bool
-};
