@@ -4,14 +4,14 @@
       "id": 7,
       "title": "Clean Code: Writing Code for Humans",
       "slug": "writing-clean-code-humans",
-      "authorId": 2,
+      "authorId": 3,
       "category": "Software Practices"
     },
     {
       "id": 9,
       "title": "Becoming an Outlier: Reprogramming the Developer Mind",
       "slug": "career-reboot-for-developer-mind",
-      "authorId": 1,
+      "authorId": 2,
       "category": "Career"
     }
   ],
