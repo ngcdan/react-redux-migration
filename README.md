@@ -6,11 +6,11 @@
 - ts-loader compile typescript to javascript
 - source-map-loader support debuging
 
+
 #### Get the [type declaration files](https://github.com/DefinitelyTyped/DefinitelyTyped) for react, react-dom
 ```
   npm install --save @types/react @types/react-dom @types/react-router-dom
 ```
-
 
 #### Add config file
 - tsconfig.json
@@ -31,6 +31,30 @@
       ]
   }
 ```
+
 -  See more options in the full list of [compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html).
 
-#### Set up build pipeline
+#### Migrating webpack using Typescript
+[Wepack 5 writing by ts file](https://webpack.js.org/configuration/configuration-languages/#typescript)
+
+```
+  npm install --save-dev typescript ts-node @types/node @types/webpack
+  # and, if using webpack-dev-server < v4.7.0
+  npm install --save-dev @types/webpack-dev-server
+```
+
+- tsconfig.ts
+
+```
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJs"
+    }
+  }
+```
+
+[See detail](#)

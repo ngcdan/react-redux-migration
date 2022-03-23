@@ -3,12 +3,15 @@
     "baseUrl": "src",
     "outDir": "./dist/", // path to output directory
     "sourceMap": true, // allow sourcemap support
+    "noImplicitAny": true,
     "moduleResolution": "node",
     "strictNullChecks": true, // enable strict null checks as a best practice
     "module": "es6", // specify module code generation
     "jsx": "react", // use typescript to transpile jsx to js
     "target": "es6", // specify ECMAScript target version
-    "allowJs": true // allow a partial TypeScript and JavaScript codebase
+    "allowJs": true, // allow a partial TypeScript and JavaScript codebase
+    "allowSyntheticDefaultImports": true, /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,
   },
   "include": [
     "./src/**/*",
@@ -18,5 +21,10 @@
     "node_modules",
     "build",
     "dist",
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }

@@ -1,20 +1,24 @@
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpackBundleAnalyzer = require("webpack-bundle-analyzer");
+import webpack from "webpack";
+import path from 'path';
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import webpackBundleAnalyzer from "webpack-bundle-analyzer";
 
 process.env.NODE_ENV = "production";
 
-module.exports = {
+const config: webpack.Configuration = {
   mode: 'production',
   target: "web",
   entry: "./src/index.tsx",
   devtool: "source-map",
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: "/",
-    filename: 'bundle.js'
+    filename: 'main.js'
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   plugins: [
     // Display bundle stats
@@ -53,7 +57,7 @@ module.exports = {
       // addition - add source-map support
       { enforce: "pre", test: /\.js$/, exclude: /node_modules/, loader: "source-map-loader" },
       {
-        test: /\.(css|scss)$/i,
+        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -63,11 +67,8 @@ module.exports = {
             }
           },
           {
-            loader: "postcss-loader",
+            loader: "sass-loader",
             options: {
-              postcssOptions: {
-                plugins: [() => [require("cssnano")]],
-              },
               sourceMap: true,
             },
           }
@@ -76,3 +77,5 @@ module.exports = {
     ],
   },
 }
+
+export default config;

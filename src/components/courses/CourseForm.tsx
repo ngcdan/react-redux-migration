@@ -9,6 +9,7 @@ interface CourseFormProps {
   onChange: () => void,
   saving: boolean
 }
+
 export default class CourseForm extends React.Component<CourseFormProps, {}> {
   render() {
     let { course, onSave, onChange, authors, saving, errors } = this.props;
